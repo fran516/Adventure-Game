@@ -14,6 +14,8 @@ public class OpenDoor : MonoBehaviour
         
     }
 
-    void OnTrigger
+    void OnTriggerEnter(Collider other) {
+        if(other.gameObject.name = )
+    }
 
 }
