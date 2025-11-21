@@ -7,12 +7,11 @@ public class CollectAmmo : MonoBehaviour
     public AudioClip reload;
     public AudioClip empty;
     public AudioClip full;
-    public AudioClip drawBridge;    
-
+    public AudioClip drawBridge;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        audioSource = GetComponent < AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,7 +22,7 @@ public class CollectAmmo : MonoBehaviour
             ammo--;
             audioSource.clip = full;
             audioSource.Play();
-
+            
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit result;
             Physics.Raycast(ray, out result);
