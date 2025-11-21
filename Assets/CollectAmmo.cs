@@ -14,14 +14,13 @@ public class CollectAmmo : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && ammo > 0) {
             ammo--;
-            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
-            RaycastHit result;
-            Physics.Raycast(ray, out result);
-            GameObject g = result.collider.gameObject;
-            if (g.name = "Target") {
-                Animation a = g.transform.parent.GetComponent<Animation>();
-                a.Play("LowerBridge");
-            }
+            // Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
+            // Physics.Raycast(ray, out result);
+            // GameObject g = result.collider.gameObject;
+            // if (g.name = "Target") {
+            //     Animation a = g.transform.parent.GetComponent<Animation>();
+            //     a.Play("LowerBridge");
+            // }
 
         }
     }
