@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class AmmoAmount : MonoBehaviour
 {
     public GameObject player;
+    public Image alpha;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

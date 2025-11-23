@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CollectAmmo : MonoBehaviour
 {
@@ -17,12 +18,13 @@ public class CollectAmmo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetButtonDown("Fire1") && ammo > 0)
         {
             ammo--;
             audioSource.clip = full;
             audioSource.Play();
-            
+
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0.0f));
             RaycastHit result;
             Physics.Raycast(ray, out result);
